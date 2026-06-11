@@ -1,0 +1,117 @@
+/* =============================================
+   PronounceAI — Login Screen CSS
+   ============================================= */
+
+/* ─── Logo Block ─────────────────────────────── */
+.logo-block {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.app-logo {
+  width: 64px;
+  height: 64px;
+  background: var(--purple);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  box-shadow: 0 8px 24px rgba(74, 58, 219, 0.35);
+}
+
+.app-logo i {
+  font-size: 32px;
+  color: var(--white);
+}
+
+.app-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: -0.5px;
+}
+
+.app-tagline {
+  font-size: 14px;
+  color: var(--gray);
+  margin-top: 4px;
+}
+
+/* ─── Login Form ─────────────────────────────── */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Password toggle ────────────────────────── */
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap .form-input {
+  padding-right: 44px;
+}
+
+.eye-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--gray);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  transition: color var(--transition);
+}
+
+.eye-btn:hover {
+  color: var(--purple);
+}
+
+/* ─── Forgot link ────────────────────────────── */
+.forgot-link {
+  font-size: 13px;
+  color: var(--purple);
+  text-align: right;
+  margin-bottom: 20px;
+  font-weight: 500;
+  transition: opacity var(--transition);
+}
+
+.forgot-link:hover {
+  opacity: 0.75;
+}
+
+/* ─── Sign up link ───────────────────────────── */
+.signup-link {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray);
+  margin-top: 20px;
+}
+
+.signup-link a {
+  color: var(--purple);
+  font-weight: 600;
+  transition: opacity var(--transition);
+}
+
+.signup-link a:hover {
+  opacity: 0.75;
+}
+
+/* ─── Error shake animation ──────────────────── */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px); }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px); }
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}

@@ -1,0 +1,110 @@
+/* =============================================
+   PronounceAI — Onboarding Screen CSS
+   ============================================= */
+
+/* ─── Chip Grid ──────────────────────────────── */
+.chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dark);
+  cursor: pointer;
+  transition: all var(--transition);
+  user-select: none;
+}
+
+.chip i {
+  font-size: 14px;
+  color: var(--gray);
+  transition: color var(--transition);
+}
+
+.chip:hover {
+  border-color: var(--purple-mid);
+  color: var(--purple);
+  background: var(--purple-ultra);
+}
+
+.chip:hover i {
+  color: var(--purple);
+}
+
+.chip.selected {
+  background: var(--purple-light);
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+.chip.selected i {
+  color: var(--purple);
+}
+
+/* ─── Level Grid ─────────────────────────────── */
+.small-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.level-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.level-card {
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dark);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  user-select: none;
+}
+
+.level-card:hover {
+  border-color: var(--purple-mid);
+  color: var(--purple);
+  background: var(--purple-ultra);
+}
+
+.level-card.selected {
+  background: var(--purple-light);
+  border-color: var(--purple);
+  color: var(--purple);
+  font-weight: 600;
+}
+
+/* ─── Chip pop-in animation ──────────────────── */
+@keyframes chipPop {
+  0%   { transform: scale(0.92); }
+  60%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.chip.selected {
+  animation: chipPop 0.2s ease forwards;
+}
+
+.level-card.selected {
+  animation: chipPop 0.2s ease forwards;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PronounceAI – AI Avatar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/avatar.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+</head>
+<body class="avatar-page">
+
+  <div class="phone-frame">
+    <div class="status-bar">
+      <span>9:45</span>
+      <span class="status-icons">
+        <i class="ti ti-wifi"></i>
+        <i class="ti ti-battery"></i>
+      </span>
+    </div>
+
+    <!-- Top Nav -->
+    <div class="avatar-nav">
+      <a href="goals.html" class="nav-back">
+        <i class="ti ti-arrow-left"></i>
+      </a>
+      <span class="nav-title">Practice Session</span>
+      <button class="nav-menu">
+        <i class="ti ti-dots-vertical"></i>
+      </button>
+    </div>
+
+    <!-- Avatar -->
+    <div class="avatar-section">
+      <div class="avatar-ring" id="avatarRing">
+        <div class="avatar-circle">
+          <i class="ti ti-robot"></i>
+        </div>
+      </div>
+      <p class="avatar-name">Aria — AI Pronunciation Coach</p>
+      <p class="avatar-status" id="avatarStatus">
+        <span class="status-dot"></span>
+        <span id="statusText">Ready</span>
+      </p>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-area" id="chatArea">
+
+      <div class="bubble-wrap left">
+        <div class="chat-bubble ai-bubble">
+          Say this sentence: <strong>"She sells seashells by the seashore."</strong>
+        </div>
+      </div>
+
+      <div class="bubble-wrap right" id="userBubble" style="display:none">
+        <div class="chat-bubble user-bubble" id="userText"></div>
+      </div>
+
+      <div class="feedback-card" id="feedbackCard" style="display:none">
+        <p class="feedback-title">
+          <i class="ti ti-check-circle"></i> Pronunciation feedback
+        </p>
+        <p class="feedback-body" id="feedbackText"></p>
+        <button class="retry-btn" onclick="retryPractice()">
+          <i class="ti ti-refresh"></i> Try again
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Record Bar -->
+    <div class="record-bar">
+      <div class="waveform" id="waveform">
+        <div class="wave-bar" style="height:8px"></div>
+        <div class="wave-bar" style="height:18px"></div>
+        <div class="wave-bar" style="height:26px"></div>
+        <div class="wave-bar" style="height:14px"></div>
+        <div class="wave-bar" style="height:22px"></div>
+        <div class="wave-bar" style="height:10px"></div>
+        <div class="wave-bar" style="height:24px"></div>
+        <div class="wave-bar" style="height:16px"></div>
+        <div class="wave-bar" style="height:8px"></div>
+        <div class="wave-bar" style="height:20px"></div>
+        <div class="wave-bar" style="height:12px"></div>
+        <div class="wave-bar" style="height:18px"></div>
+      </div>
+
+      <button class="mic-btn" id="micBtn"
+        onmousedown="startRecording()"
+        ontouchstart="startRecording()"
+        onmouseup="stopRecording()"
+        ontouchend="stopRecording()">
+        <i class="ti ti-microphone" id="micIcon"></i>
+      </button>
+
+      <span class="hold-label" id="holdLabel">Hold to speak</span>
+    </div>
+
+  </div>
+
+  <script src="js/avatar.js"></script>
+</body>
+</html>

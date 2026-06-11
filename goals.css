@@ -1,0 +1,145 @@
+/* =============================================
+   PronounceAI — Goal Selection Screen CSS
+   ============================================= */
+
+/* ─── Goal Cards ─────────────────────────────── */
+.goal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.goal-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
+  user-select: none;
+}
+
+.goal-card:hover {
+  border-color: var(--purple-mid);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.goal-card.selected {
+  border-color: var(--purple);
+  border-width: 2px;
+  background: var(--purple-ultra);
+  box-shadow: 0 4px 16px rgba(74, 58, 219, 0.14);
+}
+
+/* ─── Radio Dot ──────────────────────────────── */
+.goal-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition);
+}
+
+.goal-radio.checked {
+  border-color: var(--purple);
+}
+
+.goal-radio.checked::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--purple);
+  display: block;
+}
+
+/* ─── Goal Icons ─────────────────────────────── */
+.goal-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 22px;
+}
+
+.goal-icon.daily {
+  background: var(--teal-light);
+  color: var(--teal);
+}
+
+.goal-icon.weekly {
+  background: var(--purple-light);
+  color: var(--purple);
+}
+
+.goal-icon.monthly {
+  background: var(--amber-light);
+  color: var(--amber);
+}
+
+/* ─── Goal Info ──────────────────────────────── */
+.goal-info {
+  flex: 1;
+}
+
+.goal-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 3px;
+}
+
+.goal-desc {
+  font-size: 12px;
+  color: var(--gray);
+  margin-bottom: 6px;
+}
+
+/* ─── Badges ─────────────────────────────────── */
+.goal-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.goal-badge.green {
+  background: var(--teal-light);
+  color: var(--teal);
+}
+
+.goal-badge.purple {
+  background: var(--purple-light);
+  color: var(--purple);
+}
+
+.goal-badge.amber {
+  background: var(--amber-light);
+  color: var(--amber);
+}
+
+/* ─── Card pop animation ─────────────────────── */
+@keyframes cardSelect {
+  0%   { transform: scale(0.98); }
+  60%  { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.goal-card.selected {
+  animation: cardSelect 0.25s ease forwards;
+}

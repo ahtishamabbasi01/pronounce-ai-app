@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PronounceAI – Goal Selection</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/goals.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+</head>
+<body class="auth-page">
+
+  <div class="phone-frame">
+    <div class="status-bar">
+      <span>9:43</span>
+      <span class="status-icons">
+        <i class="ti ti-wifi"></i>
+        <i class="ti ti-battery"></i>
+      </span>
+    </div>
+
+    <div class="screen-body">
+
+      <!-- Progress -->
+      <div class="progress-wrap">
+        <div class="progress-meta">
+          <span>Step 2 of 3</span>
+          <span>66%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 66%"></div>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <h2 class="screen-title">Choose your learning plan</h2>
+      <p class="screen-sub">You can change this anytime in settings</p>
+
+      <!-- Goal Cards -->
+      <div class="goal-list" id="goalList">
+
+        <div class="goal-card" onclick="selectGoal(this)">
+          <div class="goal-radio" id="radio0"></div>
+          <div class="goal-icon daily">
+            <i class="ti ti-sun"></i>
+          </div>
+          <div class="goal-info">
+            <p class="goal-title">Daily goal</p>
+            <p class="goal-desc">10–15 min practice every day</p>
+            <span class="goal-badge green">Best for beginners</span>
+          </div>
+        </div>
+
+        <div class="goal-card selected" onclick="selectGoal(this)">
+          <div class="goal-radio checked" id="radio1"></div>
+          <div class="goal-icon weekly">
+            <i class="ti ti-calendar-week"></i>
+          </div>
+          <div class="goal-info">
+            <p class="goal-title">Weekly goal</p>
+            <p class="goal-desc">3–4 sessions per week</p>
+            <span class="goal-badge purple">Most popular</span>
+          </div>
+        </div>
+
+        <div class="goal-card" onclick="selectGoal(this)">
+          <div class="goal-radio" id="radio2"></div>
+          <div class="goal-icon monthly">
+            <i class="ti ti-calendar-month"></i>
+          </div>
+          <div class="goal-info">
+            <p class="goal-title">Monthly goal</p>
+            <p class="goal-desc">Flexible milestone-based plan</p>
+            <span class="goal-badge amber">Most flexible</span>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="avatar.html" class="btn-next">
+        Start learning <i class="ti ti-arrow-right"></i>
+      </a>
+
+      <a href="onboarding.html" class="back-link">
+        <i class="ti ti-arrow-left"></i> Back
+      </a>
+
+    </div>
+  </div>
+
+  <script src="js/goals.js"></script>
+</body>
+</html>

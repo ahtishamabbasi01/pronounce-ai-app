@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PronounceAI – Onboarding</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/onboarding.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+</head>
+<body class="auth-page">
+
+  <div class="phone-frame">
+    <div class="status-bar">
+      <span>9:42</span>
+      <span class="status-icons">
+        <i class="ti ti-wifi"></i>
+        <i class="ti ti-battery"></i>
+      </span>
+    </div>
+
+    <div class="screen-body">
+
+      <!-- Progress -->
+      <div class="progress-wrap">
+        <div class="progress-meta">
+          <span>Step 1 of 3</span>
+          <span>33%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 33%"></div>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <h2 class="screen-title">What do you want to improve?</h2>
+      <p class="screen-sub">Select all that apply</p>
+
+      <!-- Topic Chips -->
+      <div class="chip-grid" id="topicGrid">
+        <div class="chip selected" onclick="toggleChip(this)">
+          <i class="ti ti-building"></i> Business English
+        </div>
+        <div class="chip" onclick="toggleChip(this)">
+          <i class="ti ti-plane"></i> Travel
+        </div>
+        <div class="chip selected" onclick="toggleChip(this)">
+          <i class="ti ti-users"></i> Social conversations
+        </div>
+        <div class="chip" onclick="toggleChip(this)">
+          <i class="ti ti-book"></i> Academic
+        </div>
+        <div class="chip" onclick="toggleChip(this)">
+          <i class="ti ti-device-tv"></i> Media &amp; culture
+        </div>
+        <div class="chip" onclick="toggleChip(this)">
+          <i class="ti ti-heart"></i> Daily life
+        </div>
+      </div>
+
+      <!-- Level -->
+      <p class="small-label">Your current English level</p>
+      <div class="level-grid" id="levelGrid">
+        <div class="level-card" onclick="selectLevel(this)">Beginner</div>
+        <div class="level-card selected" onclick="selectLevel(this)">Intermediate</div>
+        <div class="level-card" onclick="selectLevel(this)">Upper-int.</div>
+        <div class="level-card" onclick="selectLevel(this)">Advanced</div>
+      </div>
+
+      <a href="goals.html" class="btn-next">
+        Continue <i class="ti ti-arrow-right"></i>
+      </a>
+
+      <a href="index.html" class="back-link">
+        <i class="ti ti-arrow-left"></i> Back
+      </a>
+
+    </div>
+  </div>
+
+  <script src="js/onboarding.js"></script>
+</body>
+</html>
